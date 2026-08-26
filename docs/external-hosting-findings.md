@@ -27,3 +27,7 @@ Fonte: https://aiven.io/free-mysql-database
 ## Recomendação atual
 
 Para minimizar adaptações, a arquitetura preferencial é **Render Free para o servidor Node.js + Aiven Free MySQL para o banco + armazenamento externo compatível com S3**. A autenticação Manus precisa ser substituída por autenticação própria do aplicativo ou por um provedor externo. O Render Postgres gratuito foi descartado porque expira em 30 dias.
+
+## Estado da implantação manual
+
+O repositório `gusimil-gif/hileia-comercial-analytics` foi criado como privado e recebeu os arquivos pelo usuário. A navegação pública retorna 404, comportamento esperado para um repositório privado sem sessão autenticada. A próxima etapa depende da autenticação do usuário nos painéis Aiven, Cloudflare e Render.

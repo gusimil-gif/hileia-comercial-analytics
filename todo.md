@@ -41,9 +41,18 @@
 - [x] Avaliar provedores externos com plano gratuito e selecionar uma arquitetura compatível com o aplicativo full-stack.
 - [x] Remover dependências exclusivas do ambiente Manus ou criar adaptadores externos para autenticação, banco e armazenamento.
 - [x] Criar configuração de implantação externa e documentação das variáveis de ambiente.
-- [ ] Validar build, testes, migrations e execução da versão portável.
+- [x] Validar build, testes, migrations e execução da versão portável.
 - [ ] Configurar e publicar a aplicação no provedor externo escolhido.
 - [ ] Entregar o endereço público externo e instruções de manutenção.
-- [ ] Gerar um pacote ZIP limpo para envio manual ao GitHub, sem segredos, banco local ou artefatos de build.
-- [ ] Criar um guia passo a passo para criar o repositório vazio e enviar o pacote pelo navegador.
-- [ ] Confirmar com o usuário o endereço do repositório manual antes de configurar o Render.
+- [ ] Repor no GitHub o arquivo ausente `client/src/lib/trpc.ts` identificado pelo build do Render.
+- [ ] Confirmar que a estrutura essencial do pacote portátil foi preservada no repositório GitHub.
+- [ ] Reexecutar o deploy do Render e validar migrations, login, banco e armazenamento no domínio externo.
+- [ ] Auditar diretamente a árvore de arquivos e o commit atual do repositório GitHub.
+- [ ] Auditar status, comandos, plano, variáveis e logs do serviço Render.
+- [ ] Auditar status e conectividade do MySQL Aiven sem expor credenciais.
+- [ ] Auditar bucket, escopo do token e conectividade S3 do Cloudflare R2 sem expor credenciais.
+- [x] Gerar um pacote ZIP limpo para envio manual ao GitHub, sem segredos, banco local ou artefatos de build.
+- [x] Criar um guia passo a passo para criar o repositório vazio e enviar o pacote pelo navegador.
+- [x] Executar smoke test do servidor em modo externo com autenticação local habilitada.
+- [x] Verificar a sequência de migrations e a compatibilidade do esquema com MySQL externo.
+- [x] Confirmar com o usuário o endereço do repositório manual antes de configurar o Render.
