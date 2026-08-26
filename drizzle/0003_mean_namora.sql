@@ -1,0 +1,1 @@
+ALTER TABLE `route_rules` MODIFY COLUMN `sectorCode` varchar(255);

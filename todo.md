@@ -1,0 +1,49 @@
+# Project TODO
+
+- [x] Modelar as entidades relacionais de movimentos, clientes, produtos, notas, lotes, regras, setores, rotas, verbas e auditoria.
+- [x] Implementar os perfis Administrador, Gerência Comercial, Analista e Consulta, com permissões e trilha de auditoria.
+- [x] Concluir entidades relacionais específicas para notas fiscais, setores, localidades e exceções comerciais, e aplicar a migration correspondente.
+- [x] Estender a trilha de auditoria às importações, reversões e alterações de regras e cadastros.
+- [x] Persistir modelos de mapeamento reutilizáveis e disponibilizar relatório de erros e reprocessamento por linha na central de importações.
+- [x] Criar gestão administrativa de regras de classificação e concluir os KPIs e detalhamentos de conciliação por NF, dia, cliente, setor e responsável.
+- [x] Adicionar reprocessamento individual de linhas no relatório de erros e edição de regras de classificação.
+- [x] Completar e validar todos os KPIs e fórmulas comerciais definidos para o MVP.
+- [x] Implementar e validar os KPIs de verbas promocionais, incluindo disponível, utilizada, saldo e percentual de utilização.
+- [x] Validar a conciliação de agosto/2026 diretamente a partir dos anexos ou de um pipeline equivalente de importação.
+- [x] Validar o caso de agosto/2026 usando os anexos, sem fixar valores na aplicação.
+- [x] Criar a central de importações Excel/CSV com múltiplos arquivos, prévia, mapeamento reutilizável, validação, hash antirrepetição, erros, histórico e reversão controlada.
+- [x] Armazenar arquivos originais de importação em armazenamento de objetos, com metadados vinculados aos lotes.
+- [x] Implementar as classificações configuráveis Venda, Devolução, Bonificação, Outros e Cancelado e as fórmulas financeiras e físicas definidas.
+- [x] Criar tela de Conciliação por movimentos, NF, peso, dia, cliente, setor e responsável, sem valores fixos para o caso de agosto/2026.
+- [x] Construir dashboard executivo responsivo com filtros globais e tooltips das fórmulas de KPI.
+- [x] Validar a aplicação global dos filtros no dashboard, conciliação e relatórios e confirmar os tooltips de fórmulas dos KPIs.
+- [x] Validar no navegador os filtros globais e os tooltips de fórmula dos KPIs.
+- [x] Diferenciar a estrutura de dados exportada por tipo de relatório, incluindo Adolfo – Comercial.
+- [x] Registrar evidências funcionais dos fluxos de importação, reprocessamento, reversão, filtros, exportação e permissões.
+- [x] Criar relatórios comerciais filtráveis, incluindo Adolfo – Comercial, com exportação em Excel, CSV e PDF.
+- [x] Exibir exatamente “Dados insuficientes” quando os campos necessários a um relatório não estiverem disponíveis.
+- [x] Implementar Setores e Rotas com regras versionadas, precedência cliente/setor/localidade, validação de vigências e carga inicial fornecida.
+- [x] Implementar controle e análise de verbas promocionais, preservando a regra de não redução de preços.
+- [x] Implementar versionamento imutável de Setores e Rotas e aplicar a precedência cliente > setor > localidade na resolução dos movimentos.
+- [x] Implementar gestão operacional de verbas com persistência e bloqueios de redução de preço e transferência entre clientes.
+- [x] Registrar uma validação ponta a ponta reprodutível dos fluxos críticos e da aplicação dos filtros globais.
+- [x] Aplicar a resolução territorial também ao reprocessamento de linhas e validar a consistência entre os caminhos de importação.
+- [x] Completar a criação, listagem e utilização de verbas promocionais na interface, com testes dos bloqueios de negócio.
+- [x] Criar uma rotina automatizada de validação de fluxos críticos que possa ser executada localmente com dados de referência.
+- [x] Atualizar movimentos existentes no reprocessamento territorial e testar consistência entre importação e reprocessamento.
+- [x] Cobrir em testes os bloqueios de redução de preço e transferência entre clientes na utilização de verbas.
+- [x] Expandir a rotina de validação com testes de fluxos críticos de importação, reversão e controle de acesso.
+- [x] Adicionar teste que compare o enriquecimento territorial da importação com o reprocessamento de uma linha existente.
+- [x] Adicionar testes de importação e reversão controlada com cobertura de perfis críticos.
+- [x] Executar testes de fluxo de importação e reversão com persistência simulada, incluindo sucesso autorizado e bloqueio de Consulta.
+- [x] Criar documentação técnica, dicionário de dados e testes automatizados.
+- [x] Validar visualmente, testar os fluxos essenciais e preparar a entrega inicial.
+- [x] Avaliar provedores externos com plano gratuito e selecionar uma arquitetura compatível com o aplicativo full-stack.
+- [x] Remover dependências exclusivas do ambiente Manus ou criar adaptadores externos para autenticação, banco e armazenamento.
+- [x] Criar configuração de implantação externa e documentação das variáveis de ambiente.
+- [ ] Validar build, testes, migrations e execução da versão portável.
+- [ ] Configurar e publicar a aplicação no provedor externo escolhido.
+- [ ] Entregar o endereço público externo e instruções de manutenção.
+- [ ] Gerar um pacote ZIP limpo para envio manual ao GitHub, sem segredos, banco local ou artefatos de build.
+- [ ] Criar um guia passo a passo para criar o repositório vazio e enviar o pacote pelo navegador.
+- [ ] Confirmar com o usuário o endereço do repositório manual antes de configurar o Render.

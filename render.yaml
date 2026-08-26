@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: hileia-comercial-analytics
+    runtime: node
+    plan: free
+    buildCommand: pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.0
+      - key: NODE_ENV
+        value: production
+      - key: EXTERNAL_AUTH
+        value: "true"
+      - key: EXTERNAL_APP_ID
+        value: hileia-comercial-analytics
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: EXTERNAL_ADMIN_EMAIL
+        sync: false
+      - key: EXTERNAL_ADMIN_PASSWORD
+        sync: false
+      - key: EXTERNAL_ADMIN_NAME
+        value: Administrador
+      - key: R2_ACCOUNT_ID
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_BUCKET
+        value: hileia-importacoes
